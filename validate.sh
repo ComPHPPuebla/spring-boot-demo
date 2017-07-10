@@ -2,17 +2,23 @@
 LINE=$'\n'
 ERROR=""
 
-if [ -e target ] && [ -d target ]
+COUNT=$(git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master) | grep "^target" | wc -l)
+
+if [ "${COUNT}" -gt 0 ]
 then
     ERROR="${ERROR}* Do not commit your target directory${LINE}"
 fi
 
-if [ -e .idea ] && [ -d .idea ]
+COUNT=$(git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master) | grep "^.idea" | wc -l)
+
+if [ "${COUNT}" -gt 0 ]
 then
     ERROR="${ERROR}* Do not commit your .idea directory${LINE}"
 fi
 
-if [ -e src/main/resources/application.properties ]
+COUNT=$(git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master) | grep "^src/main/resources/application.properties" | wc -l)
+
+if [ "${COUNT}" -gt 0 ]
 then
     ERROR="${ERROR}* Do not commit your application.properties file${LINE}"
 fi
@@ -22,7 +28,7 @@ echo "${COUNT}"
 
 if [ "${COUNT}" -gt 20 ]
 then
-    ERROR="${ERROR}* Your commit includes too many files."
+    ERROR="${ERROR}* Your commit includes too many files: ${COUNT}${LINE}"
 fi
 
 if [ ! -z "$ERROR" ]
