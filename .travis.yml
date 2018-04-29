@@ -5,8 +5,7 @@ jdk:
 
 env:
   global:
-    - FOO=Luis
-    - BAR=Javax
+    - FOO=Luis BAR=Javax
     secure: EF5faPvAxxKrbRGUA7jMGALg9RkIMFGtWYUspZZ1YEDzF1hMPKJlHEY3u6uKr+xm87nKWZ6bkJ+AEuQbyhLAA6zqUQcHv2XaQMR1nZs22udQew+ccVchYjUvuEFirQwhd8BL+Kwm3dPZsgjyAXtngKZSF6a/ELY+IKm2kOOKXF47grT7IR3IrOchYiIN7dq66GWS6pPy2kSuaSCKiJas+FtJo8PO+2pxO2n1Qatd7rVel6TLvWAozdiCJandrL6eFNjvSfTaQSd5A8Aj5evW3Uz7mk0/7e137BDgdKDyaFnl5XlJmKrow1QuX6ItD8zZ8BDQQ1Pk6v+w/kPz/13NtPrlpNxWr/Qoei6iUjtzOYC3il4z2+lAn3pKIqgGBClYxOnyevSYkv98eL5OtTm8oSW/Fbc/Lh1wIc1TIrQkH6+FKCdcoe7AVrGdIqG6dJzfjik6AHZAXDb18sQm8Wbkufh31xOE8uHDi7QC8mDd8B8JDwKCHfsXuUM6HEOIf764jdceLblFqGVUhPpKwVS7dbyBfJMHskfCj29GHAXekuKz3M6ekM5FrfGN29Lh6Mv73LbcfWebyZhwvQUX2yvSvACdcahgMVi63GJ98RCoro7bAyoaWKaIDai0kpBKwZy1NtRyTAXNVi2QoywzdAzZ4BdrMaxdx3QGvaLUbhLNDEs=
 
 before_script:
