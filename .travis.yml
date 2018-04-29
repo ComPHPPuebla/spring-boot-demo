@@ -3,9 +3,13 @@ language: java
 jdk:
   - oraclejdk8
 
+env:
+  secure: U+R9p4eaA5PsF7F0Vf39pin/18hhVA+SHQzI9/qGXbrYD6kcuoHSqvqkkoEO+r0PoazNyPWTF2ml4XlxN+a6Cb6I+TWA1wxjEksWU9gvz3zpiqrIh8ZPiAPVw8kv8lObAbPZdpNvIYvoJGJHvYvMjpsNm9J99q4eYNEc7ElBiNxOmgm6xYMzXiwdx4t0bOLEcBWd7B2R803/bqfSBqMESMNDGx7OOnZuUWh9GmIyQ23uST99Tu8p7qHUuemAnf9i4EJ37TJR6qPHMLCScWGwCFpY/X+S/lpFIbCetolqYVm3hJPg/VGllSfJlWiY4GY6TK0gm6xCJsnH2IrlNdRwbqeWcOqWzm2O+JIbPAZkhE76QLAKuZ62XvT18unsmPsaP7JXc8RZmiB3Qbp768u7r9A6PQnGU5yiaS4wIhGkPnyOqZOIQ5Gs8ptU0hswYcdD+6GAs0Nw2w3zK+d2rBsmV4LyvU09MlLvJ0IDzUPp42ZFiTnBoBWU4qEv8lpdOigruIW24MHQvgkS1EA0Ltazs/L87i2wq4Y6eOaB5L1dNGfg1XgnRaTQPXHI58qx04VUOKsVH1OxXiNAZ0N2+SWrL2UG3eqKUjsXbTMpmO8Cno/jMasPqqDJXOx6UOFa+ouWsVS2Is972tWMZ2voXdo4l7ba7/K0qvT+KwBt83Lg4L8=
+
 before_script:
   - ./validate.sh
   - mvn package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - echo "Success!"
+  - echo $FOO
